@@ -79,7 +79,7 @@ export const heroData: Hero = {
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
+      href: '/my-hideout/assets/resume.pdf',  // include repository name for github page deployment
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
