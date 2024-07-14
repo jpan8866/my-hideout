@@ -1,34 +1,56 @@
 import {ArrowTopRightOnSquareIcon} from '@heroicons/react/24/outline';
 import classNames from 'classnames';
 import Image from 'next/image';
-import {FC, memo, MouseEvent, useCallback, useEffect, useRef, useState} from 'react';
+import {FC, memo, MouseEvent, useCallback, useEffect, useRef, useState, useMemo} from 'react';
 
-import {isMobile} from '../../config';
+import {isApple, isMobile} from '../../config';
 import {portfolioItems, SectionId} from '../../data/data';
 import {PortfolioItem} from '../../data/dataDef';
 import useDetectOutsideClick from '../../hooks/useDetectOutsideClick';
 import Section from '../Layout/Section';
+import testimonialImage from '../../images/testimonial.webp'
 
 const Portfolio: FC = memo(() => {
+  const [parallaxEnabled, setParallaxEnabled] = useState(false);
+  
+  const resolveSrc = useMemo(() => {
+    if (!testimonialImage) return undefined;
+    return typeof testimonialImage === 'string' ? testimonialImage : testimonialImage.src;
+  }, [testimonialImage]);
+
+  useEffect(() => {
+    setParallaxEnabled(!(isMobile && isApple));
+  }, []);
+
   return (
-    <Section className="bg-neutral-800" sectionId={SectionId.Portfolio}>
-      <div className="flex flex-col gap-y-8">
-        <h2 className="self-center text-xl font-bold text-white">Check out some of my work</h2>
-        <div className=" w-full columns-2 md:columns-3 lg:columns-4">
-          {portfolioItems.map((item, index) => {
-            const {title, image} = item;
-            return (
-              <div className="pb-6" key={`${title}-${index}`}>
-                <div
-                  className={classNames(
-                    'relative h-max w-full overflow-hidden rounded-lg shadow-lg shadow-black/30 lg:shadow-xl',
-                  )}>
-                  <Image alt={title} className="h-full w-full" placeholder="blur" src={image} />
-                  <ItemOverlay item={item} />
-                </div>
-              </div>
-            );
-          })}
+    <Section noPadding sectionId={SectionId.Portfolio}>
+      <div
+        className={classNames(
+          'flex items-center justify-center bg-cover bg-center px-4 py-16 md:py-24 lg:px-8',
+          parallaxEnabled && 'bg-fixed',
+          {'bg-neutral-700': !testimonialImage},
+        )}
+        style={testimonialImage ? {backgroundImage: `url(${resolveSrc}`} : undefined}>
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col gap-y-8">
+            <h2 className="self-center text-xl font-bold text-white">Check out some of my work</h2>
+            <div className=" w-full columns-2 md:columns-3 lg:columns-4">
+              {portfolioItems.map((item, index) => {
+                const {title, image} = item;
+                return (
+                  <div className="pb-6" key={`${title}-${index}`}>
+                    <div
+                      className={classNames(
+                        'relative h-max w-full overflow-hidden rounded-lg shadow-lg shadow-black/30 lg:shadow-xl',
+                      )}>
+                      <Image alt={title} className="h-full w-full" placeholder="blur" src={image} />
+                      <ItemOverlay item={item} />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </Section>

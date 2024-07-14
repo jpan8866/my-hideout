@@ -15,6 +15,9 @@ const nextConfig = {
 
     return config;
   },
+  basePath: '/personal-website-react',
+  output: 'export',
+  assetPrefix: '/personal-website-react',
   compress: true,
   generateEtags: true,
   pageExtensions: ['tsx', 'mdx', 'ts'],

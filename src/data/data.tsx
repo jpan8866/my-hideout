@@ -2,29 +2,23 @@ import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
   BuildingOffice2Icon,
-  CalendarIcon,
+  // CalendarIcon,
   FlagIcon,
   MapIcon,
   SparklesIcon,
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
+// import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
+// import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
+// import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
+import memoriesApp from '../images/portfolio/memoriesapp.jpg';
+import rasppiCar from '../images/portfolio/rpcar1.jpg';
+import carDashboardUi from '../images/portfolio/cardashboardui.jpg';
+import carServer from '../images/portfolio/carserver1.jpg';
+import talkingPlant from '../images/portfolio/talkingplant.jpg'
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -44,8 +38,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: "John's hideout",
+  description: "My personal website =)",
 };
 
 /**
@@ -69,18 +63,17 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `Hey, I'm John`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a generalist <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
+        at <strong className="text-stone-100">Bell Canada</strong> helping build modern applications to accelerate cloud migration.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        In my free time time, you can catch me on the <strong className="text-stone-100">pickle ball</strong> field,
+        bashing my <strong className="text-stone-100">piano</strong>, or fiddling with my  
+        <strong className="text-stone-100"> Raspberry Pi</strong>.
       </p>
     </>
   ),
@@ -104,16 +97,18 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `Hi! I'm an Engineer with a blend of aerospace and tech expertise. 
+  My journey in aerospace has taught me precision and efficiency, which I now bring to the software world in every project I tackle. 
+  With a Bachelor's in Mechanical Engineering from McGill University and ongoing Master's in Computer Science at Georgia Tech, 
+  I bring a multidisciplinary approach to software development.
+  I love tackling complex challenges using the latest tools to build and deploy full-stack web applications, 
+  working with technologies like Vue.js, Django REST Framework, Gitlab-Ci, Kubernetes, and Docker. I am still constantly learning new tools to integrate into my workflow.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'New York, USA', Icon: MapIcon},
+    {label: 'Nationality', text: 'American / Canadian', Icon: FlagIcon},
+    {label: 'Interests', text: 'Tennis, Motorsports, Stock trading', Icon: SparklesIcon},
+    {label: 'Study', text: 'Georgia Tech', Icon: AcademicCapIcon},
+    {label: 'Employment', text: 'Bell Canada', Icon: BuildingOffice2Icon},
   ],
 };
 
@@ -130,11 +125,7 @@ export const skills: SkillGroup[] = [
       },
       {
         name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
+        level: 10,
       },
     ],
   },
@@ -142,16 +133,16 @@ export const skills: SkillGroup[] = [
     name: 'Frontend development',
     skills: [
       {
+        name: 'Vue2/3',
+        level: 8,
+      },
+      {
         name: 'React',
-        level: 9,
+        level: 7,
       },
       {
         name: 'Typescript',
         level: 7,
-      },
-      {
-        name: 'GraphQL',
-        level: 6,
       },
     ],
   },
@@ -159,33 +150,41 @@ export const skills: SkillGroup[] = [
     name: 'Backend development',
     skills: [
       {
+        name: 'Django REST Framework',
+        level: 9,
+      },
+      {
         name: 'Node.js',
-        level: 8,
+        level: 7,
       },
       {
         name: 'Rust',
         level: 5,
       },
-      {
-        name: 'Golang',
-        level: 4,
-      },
     ],
   },
   {
-    name: 'Mobile development',
+    name: 'DevOps',
     skills: [
       {
-        name: 'React Native',
+        name: 'Gitlab-CI',
         level: 9,
       },
       {
-        name: 'Flutter',
-        level: 4,
+        name: 'Kubernetes',
+        level: 7,
       },
       {
-        name: 'Swift',
-        level: 3,
+        name: 'Helm',
+        level: 7,
+      },
+      {
+        name: 'Docker',
+        level: 7,
+      },
+      {
+        name: 'OpenShift',
+        level: 7
       },
     ],
   },
@@ -196,70 +195,34 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage1,
+    title: 'NightKidz Social Media App',
+    description: 'Social media application (built using ReactJs, Node.js, Express & MongoDB) designed for automotive enthusiasts to interact and share their passion.',
+    url: 'https://nightkidzmemories.netlify.app/posts',
+    image: memoriesApp,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage2,
+    title: 'Autopilot Pi-Car',
+    description: 'Autopilot software for a Raspberry Pi-powered car, integrating object detection and autonomous navigation',
+    url: 'https://github.com/jpan8866/baby-pilot/tree/master/autopilot/Lab_1_B',
+    image: rasppiCar,
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage3,
+    title: 'Talking Plant',
+    description: 'Project to bestow plants the power of speech, giving them the ability to ask for water, sunlight and help against predators (my cat).',
+    url: 'https://github.com/jpan8866/talking-plant',
+    image: talkingPlant,
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage4,
+    title: 'Car dashboard UI',
+    description: 'A car dashboard built using Electron which works with a Node backend to visualize metrics and remotely control a Raspberry Pi-powered car.',
+    url: 'https://github.com/jpan8866/car-dashboard', // move server into front end dashboard
+    image: carDashboardUi,
   },
   {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage5,
-  },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
+    title: 'Car dashboard Server',
+    description: 'Node backend to serve vehicle metrics and video feed',
+    url: 'https://github.com/jpan8866/baby-pilot/tree/master/autopilot/Lab_2',
+    image: carServer,
   },
 ];
 
@@ -268,40 +231,48 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'August 2024 - August 2026 ',
+    location: 'Georgia Institute of Technology',
+    title: 'Masters of Science in Computer Science',
+    content: <p>Concentration in Computing.</p>,
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'January 2024 - May 2024',
+    location: 'University of Illinois Urbana-Champaign',
+    title: 'Masters in Computer Science',
+    content: <p>CGPA: 4.0/4.0. Transfered to Georgia Tech.</p>,
+  },
+  {
+    date: 'August 2016 - May 2021',
+    location: 'McGill University',
+    title: 'Bachelors in Mechanical Engineering, Minor in Computer Science',
+    content: <p>CGPA: 4.66/4.00. <i>Courses</i>: Data Structures & Algorithms, Database Systems, Java OOP, 
+      Software Systems, Applied Machine Learning, AI, Programming Languages & Paradigms</p>,
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'February 2022 - Present',
+    location: 'Bell Canada',
+    title: 'Software Engineer',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+        <ul className="list-disc pl-5">
+          <li className="mb-1">Led and developed the full-stack integration of 5 features, achieving significant process improvements, including an 80% reduction in lead time for cloud deployments, saving an average of 450 man-hours. <strong>(Vue2 Typescript, Python Django REST Framework)</strong></li>
+        	<li className="mb-1">Implemented numerous UI features and components in a scaled trunk-based development environment, including user-friendly admin pages with dynamic filtering and table functionalities, which accelerated daily administrative tasks such as data management by 90%. <strong>(Vue2, Typescript)</strong></li>
+          <li className="mb-1">Built, and maintained robust CI/CD pipelines for new and existing applications, resulting in an 80% improvement in the deployment speed of new updates and 0% error rate with no rollback incidents since launching the new application into production. <strong>(OpenShift, Kubernetes, Docker, Gitlab-CI, Artifactory, Helm, Vault)</strong></li>
+          <li className="mb-1">Developed comprehensive Grafana dashboards to visualize backend data as well as application health monitoring enabling real-time analytics and insights. <strong>(Grafana, Prometheus)</strong></li>  
+        </ul>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'May 2021 - October 2021',
+    location: 'Damotech',
+    title: 'Project Engineer',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+      <ul className="list-disc pl-5">
+        <li>Undertook the development of a machine learning model <strong>(CNN)</strong> to classify rack damage image data to assist inspection duties. <strong>(Scikit-learn)</strong></li>
+      </ul>
     ),
   },
 ];
@@ -312,21 +283,12 @@ export const experience: TimelineItem[] = [
 export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
-    {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
-    },
-    {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
-    },
-    {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
-    },
+    // add testimonial in below format to add testimonial section
+    // {
+    //   name: 'John Doe',
+    //   text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
+    //   image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
+    // },
   ],
 };
 
@@ -336,27 +298,26 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: 'Eager to connect with you!',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'john.pan@mail.mcgill.ca',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'New York, USA',
+      href: 'https://maps.app.goo.gl/MjHPaA1SNxJQTrdM9',
     },
     {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      type: ContactType.LinkedIn,
+      text: 'John Derek Pan',
+      href: 'https://www.linkedin.com/in/johnderekpan/',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'jpan8866',
+      href: 'https://github.com/jpan8866',
     },
   ],
 };
@@ -365,9 +326,6 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/jpan8866'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/johnderekpan/'},
 ];
