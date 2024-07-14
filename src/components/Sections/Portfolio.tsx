@@ -1,14 +1,14 @@
 import {ArrowTopRightOnSquareIcon} from '@heroicons/react/24/outline';
 import classNames from 'classnames';
 import Image from 'next/image';
-import {FC, memo, MouseEvent, useCallback, useEffect, useRef, useState, useMemo} from 'react';
+import {FC, memo, MouseEvent, useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {isApple, isMobile} from '../../config';
 import {portfolioItems, SectionId} from '../../data/data';
 import {PortfolioItem} from '../../data/dataDef';
 import useDetectOutsideClick from '../../hooks/useDetectOutsideClick';
-import Section from '../Layout/Section';
 import testimonialImage from '../../images/testimonial.webp'
+import Section from '../Layout/Section';
 
 const Portfolio: FC = memo(() => {
   const [parallaxEnabled, setParallaxEnabled] = useState(false);
@@ -16,7 +16,7 @@ const Portfolio: FC = memo(() => {
   const resolveSrc = useMemo(() => {
     if (!testimonialImage) return undefined;
     return typeof testimonialImage === 'string' ? testimonialImage : testimonialImage.src;
-  }, [testimonialImage]);
+  }, []);
 
   useEffect(() => {
     setParallaxEnabled(!(isMobile && isApple));

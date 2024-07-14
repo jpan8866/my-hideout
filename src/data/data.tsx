@@ -14,10 +14,10 @@ import LinkedInIcon from '../components/Icon/LinkedInIcon';
 // import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 // import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
-import memoriesApp from '../images/portfolio/memoriesapp.jpg';
-import rasppiCar from '../images/portfolio/rpcar1.jpg';
 import carDashboardUi from '../images/portfolio/cardashboardui.jpg';
 import carServer from '../images/portfolio/carserver1.jpg';
+import memoriesApp from '../images/portfolio/memoriesapp.jpg';
+import rasppiCar from '../images/portfolio/rpcar1.jpg';
 import talkingPlant from '../images/portfolio/talkingplant.jpg'
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';

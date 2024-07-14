@@ -1,5 +1,5 @@
+import {useForm, ValidationError} from '@formspree/react';
 import {FC, memo, useCallback, useMemo, useState} from 'react';
-import { useForm, ValidationError } from '@formspree/react';
 
 interface FormData {
   name: string;
@@ -52,44 +52,44 @@ const ContactForm: FC = memo(() => {
 
   
   return (
-    <form onSubmit={handleSubmit} className="grid min-h-[320px] grid-cols-1 gap-y-4">
-      <input id="name" className={inputClasses} name="name" placeholder="Name" type="text" />
+    <form className="grid min-h-[320px] grid-cols-1 gap-y-4" onSubmit={handleSubmit}>
+      <input className={inputClasses} id="name" name="name" placeholder="Name" type="text" />
       <ValidationError 
-        prefix="Name" 
+        errors={state.errors} 
         field="name"
-        errors={state.errors}
+        prefix="Name"
       />
       <input
-        id="email"
         autoComplete="email"
         className={inputClasses}
+        id="email"
         name="email"
         placeholder="Email"
         type="email"
       />
       <ValidationError 
-        prefix="Email" 
+        errors={state.errors} 
         field="email"
-        errors={state.errors}
+        prefix="Email"
       />
       <textarea
-        id="message"
         className={inputClasses}
+        id="message"
         maxLength={250}
         name="message"
         placeholder="Message"
         rows={6}
       />
       <ValidationError 
-        prefix="Message" 
+        errors={state.errors} 
         field="message"
-        errors={state.errors}
+        prefix="Message"
       />
       <button
         aria-label="Submit contact form"
         className="w-max rounded-full border-2 border-orange-600 bg-stone-900 px-4 py-2 text-sm font-medium text-white shadow-md outline-none hover:bg-stone-800 focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-stone-800"
-        type="submit"
-        disabled={state.submitting}>
+        disabled={state.submitting}
+        type="submit">
         Send Message
       </button>
     </form>
