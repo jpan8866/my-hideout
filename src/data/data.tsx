@@ -203,7 +203,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Autopilot Pi-Car',
     description: 'Autopilot software for a Raspberry Pi-powered car, integrating object detection and autonomous navigation',
-    url: 'https://github.com/baby-pilot/self-driving-car/tree/main/autopilot/Lab_1_B',
+    url: 'https://github.com/jpan8866/baby-pilot/tree/master/autopilot/Lab_1_B',
     image: rasppiCar,
   },
   {
@@ -283,20 +283,11 @@ export const experience: TimelineItem[] = [
 export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
+    // add testimonial in below format to add testimonial section
     // {
     //   name: 'John Doe',
     //   text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
     //   image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
-    // },
-    // {
-    //   name: 'Jane Doe',
-    //   text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-    //   image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
-    // },
-    // {
-    //   name: 'Someone else',
-    //   text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-    //   image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
     // },
   ],
 };

@@ -53,18 +53,12 @@ const ContactForm: FC = memo(() => {
   
   return (
     <form onSubmit={handleSubmit} className="grid min-h-[320px] grid-cols-1 gap-y-4">
-      <label htmlFor="name">
-      Email Address
-    </label>
       <input id="name" className={inputClasses} name="name" placeholder="Name" type="text" />
       <ValidationError 
         prefix="Name" 
         field="name"
         errors={state.errors}
       />
-      <label htmlFor="email">
-      Email Address
-    </label>
       <input
         id="email"
         autoComplete="email"
@@ -78,9 +72,6 @@ const ContactForm: FC = memo(() => {
         field="email"
         errors={state.errors}
       />
-      <label htmlFor="message">
-      Email Address
-    </label>
       <textarea
         id="message"
         className={inputClasses}

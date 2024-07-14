@@ -17,7 +17,7 @@ const About: FC = memo(() => {
             </div>
           </div>
         )}
-        <div className={classNames('col-span-1 flex flex-col gap-y-6 pl-5', {'md:col-span-3': !!profileImageSrc})}>
+        <div className={classNames('col-span-1 flex flex-col gap-y-6 pl-3', {'md:col-span-3': !!profileImageSrc})}>
           <div className="flex flex-col gap-y-2">
             <h2 className="text-2xl font-bold text-white">About me</h2>
             <p className="prose prose-sm text-gray-300 sm:prose-base">{description}</p>
