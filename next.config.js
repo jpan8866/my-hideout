@@ -15,9 +15,9 @@ const nextConfig = {
 
     return config;
   },
-  basePath: '/personal-website-react',
+  basePath: '/my-hideout',
   output: 'export',
-  assetPrefix: '/personal-website-react',
+  assetPrefix: '/my-hideout',
   compress: true,
   generateEtags: true,
   pageExtensions: ['tsx', 'mdx', 'ts'],
