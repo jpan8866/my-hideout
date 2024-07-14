@@ -15,7 +15,7 @@ const Portfolio: FC = memo(() => {
   
   const resolveSrc = useMemo(() => {
     if (!testimonialImage) return undefined;
-    return typeof testimonialImage === 'string' ? testimonialImage : testimonialImage.src;
+    return typeof testimonialImage === 'string' ? testimonialImage : (testimonialImage as any).src;
   }, []);
 
   useEffect(() => {
