@@ -234,13 +234,13 @@ export const education: TimelineItem[] = [
     date: 'August 2024 - August 2026 ',
     location: 'Georgia Institute of Technology',
     title: 'Masters of Science in Computer Science',
-    content: <p>Concentration in Computing.</p>,
+    content: <p>Concentration in Computing/Machine Learning.</p>,
   },
   {
     date: 'January 2024 - May 2024',
     location: 'University of Illinois Urbana-Champaign',
     title: 'Masters in Computer Science',
-    content: <p>CGPA: 4.0/4.0. Transfered to Georgia Tech.</p>,
+    content: <p>CGPA: 4.0/4.0. Transferred to Georgia Tech.</p>,
   },
   {
     date: 'August 2016 - May 2021',
