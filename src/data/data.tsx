@@ -246,7 +246,7 @@ export const education: TimelineItem[] = [
     date: 'August 2016 - May 2021',
     location: 'McGill University',
     title: 'Bachelors in Mechanical Engineering, Minor in Computer Science',
-    content: <p>CGPA: 4.66/4.00. <i>Courses</i>: Data Structures & Algorithms, Database Systems, Java OOP, 
+    content: <p>CGPA: 3.66/4.00. <i>Courses</i>: Data Structures & Algorithms, Database Systems, Java OOP, 
       Software Systems, Applied Machine Learning, AI, Programming Languages & Paradigms</p>,
   },
 ];
