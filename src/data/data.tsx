@@ -253,7 +253,23 @@ export const education: TimelineItem[] = [
 
 export const experience: TimelineItem[] = [
   {
-    date: 'February 2022 - Present',
+    date: 'July 2024 - Present',
+    location: 'PearAI',
+    title: 'Software Engineer',
+    content: (
+        <ul className="list-disc pl-5">
+          <li className="mb-1">Development of an AI-powered code editor based on VSCode, including the integration of AI search using Perplexity API <strong>(Typescript, VSCode API)</strong>.</li>
+        	<li className="mb-1">Implemented backend server logic using <strong>FastAPI</strong>, including user credit management and subscription tracking.</li>
+          <li className="mb-1">Integrated <strong>mem0</strong> as memory layer with asynchronous memory extraction and injection, for intelligent context retention in LLM interactions, offering users a personalized experience (<strong>FastAPI</strong>).</li>
+          <li className="mb-1">Designed and implemented responsive onboarding UI using <strong>React</strong> and <strong>Tailwind</strong> and injected into VSCode webview, enhancing user onboarding experience.</li>
+          <li className="mb-1">Optimized app performance through custom <strong>Redux</strong> state management, allowing independent history tracking between different integrations.</li>
+
+          ●	
+        </ul>
+    ),
+  },
+  {
+    date: 'February 2022 - February 2024',
     location: 'Bell Canada',
     title: 'Software Engineer',
     content: (
@@ -263,16 +279,6 @@ export const experience: TimelineItem[] = [
           <li className="mb-1">Built, and maintained robust CI/CD pipelines for new and existing applications, resulting in an 80% improvement in the deployment speed of new updates and 0% error rate with no rollback incidents since launching the new application into production. <strong>(OpenShift, Kubernetes, Docker, Gitlab-CI, Artifactory, Helm, Vault)</strong></li>
           <li className="mb-1">Developed comprehensive Grafana dashboards to visualize backend data as well as application health monitoring enabling real-time analytics and insights. <strong>(Grafana, Prometheus)</strong></li>  
         </ul>
-    ),
-  },
-  {
-    date: 'May 2021 - October 2021',
-    location: 'Damotech',
-    title: 'Project Engineer',
-    content: (
-      <ul className="list-disc pl-5">
-        <li>Undertook the development of a machine learning model <strong>(CNN)</strong> to classify rack damage image data to assist inspection duties. <strong>(Scikit-learn)</strong></li>
-      </ul>
     ),
   },
 ];
