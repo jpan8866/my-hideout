@@ -68,10 +68,10 @@ export const heroData: Hero = {
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         I'm a generalist <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Bell Canada</strong> helping build modern applications to accelerate cloud migration.
+        at <strong className="text-stone-100">PearAI</strong> helping build the best AI-powered code editor (P.S. It's open-source!!).
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me on the <strong className="text-stone-100">pickle ball</strong> field,
+        In my free time time, you can catch me on the <strong className="text-stone-100">tennis</strong> court,
         bashing my <strong className="text-stone-100">piano</strong>, or fiddling with my  
         <strong className="text-stone-100"> Raspberry Pi</strong>.
       </p>
@@ -104,11 +104,11 @@ export const aboutData: About = {
   I love tackling complex challenges using the latest tools to build and deploy full-stack web applications, 
   working with technologies like Vue.js, Django REST Framework, Gitlab-Ci, Kubernetes, and Docker. I am still constantly learning new tools to integrate into my workflow.`,
   aboutItems: [
-    {label: 'Location', text: 'New York, USA', Icon: MapIcon},
+    {label: 'Location', text: 'San Francisco, USA', Icon: MapIcon},
     {label: 'Nationality', text: 'American / Canadian', Icon: FlagIcon},
     {label: 'Interests', text: 'Tennis, Motorsports, Stock trading', Icon: SparklesIcon},
     {label: 'Study', text: 'Georgia Tech', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Bell Canada', Icon: BuildingOffice2Icon},
+    {label: 'Employment', text: 'PearAI', Icon: BuildingOffice2Icon},
   ],
 };
 
