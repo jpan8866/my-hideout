@@ -263,8 +263,6 @@ export const experience: TimelineItem[] = [
           <li className="mb-1">Integrated <strong>mem0</strong> as memory layer with asynchronous memory extraction and injection, for intelligent context retention in LLM interactions, offering users a personalized experience (<strong>FastAPI</strong>).</li>
           <li className="mb-1">Designed and implemented responsive onboarding UI using <strong>React</strong> and <strong>Tailwind</strong> and injected into VSCode webview, enhancing user onboarding experience.</li>
           <li className="mb-1">Optimized app performance through custom <strong>Redux</strong> state management, allowing independent history tracking between different integrations.</li>
-
-          ●	
         </ul>
     ),
   },
