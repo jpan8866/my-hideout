@@ -67,7 +67,7 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a generalist <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently completing a SWE internship at Shopify.
+        I'm a generalist <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently a SWE intern at Shopify.
         Previously, I've helped build <strong className="text-stone-100">PearAI</strong>, the best AI-powered code editor (P.S. It's open-source!!).
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
