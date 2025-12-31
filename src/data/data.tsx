@@ -67,12 +67,11 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a generalist <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently a SWE intern at Shopify.
-        Previously, I've helped build <strong className="text-stone-100">PearAI</strong>, the best AI-powered code editor (P.S. It's open-source!!).
+        I'm a <strong className="text-stone-100">Software Engineer</strong> currently building the future of commerce at Shopify.
+        Previously, I've helped build <strong className="text-stone-100">PearAI</strong>, the open-source AI-powered code editor.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me on the <strong className="text-stone-100">tennis</strong> court,
-        bashing my <strong className="text-stone-100">piano</strong>, or fiddling with my  
+        In my free time time, you can catch me on the <strong className="text-stone-100">tennis</strong> court, or fiddling with my  
         <strong className="text-stone-100"> Raspberry Pi</strong>.
       </p>
     </>
@@ -97,18 +96,16 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Hi! I'm an Engineer with a blend of aerospace and tech expertise. 
-  My journey in aerospace has taught me precision and efficiency, which I now bring to the software world in every project I tackle. 
-  With a Bachelor's in Mechanical Engineering from McGill University and ongoing Master's in Computer Science at Georgia Tech, 
-  I bring a multidisciplinary approach to software development.
-  I love tackling complex challenges using the latest tools to build and deploy full-stack web applications, 
-  working with technologies like Vue.js, Django REST Framework, Gitlab-Ci, Kubernetes, and Docker. I am still constantly learning new tools to integrate into my workflow.`,
+  description: `Hi! I’m a software engineer focused on building reliable, scalable systems, with experience across checkout and admin surfaces at Shopify. 
+  I have a background in aerospace engineering, which shaped my approach to writing precise, dependable software, and I now apply that mindset to complex production systems.
+
+  I hold a Bachelor’s in Mechanical Engineering from McGill University and am currently pursuing a Master’s in Computer Science at Georgia Tech. I enjoy owning problems end-to-end; from design and implementation to testing, observability, and release.`,
   aboutItems: [
-    {label: 'Location', text: 'San Francisco, USA', Icon: MapIcon},
+    {label: 'Location', text: 'New York, USA', Icon: MapIcon},
     {label: 'Nationality', text: 'American / Canadian', Icon: FlagIcon},
     {label: 'Interests', text: 'Tennis, Motorsports, Stock trading', Icon: SparklesIcon},
     {label: 'Study', text: 'Georgia Tech', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'PearAI', Icon: BuildingOffice2Icon},
+    {label: 'Employment', text: 'Shopify', Icon: BuildingOffice2Icon},
   ],
 };
 
@@ -133,16 +130,16 @@ export const skills: SkillGroup[] = [
     name: 'Frontend development',
     skills: [
       {
-        name: 'Vue2/3',
+        name: 'React',
         level: 8,
       },
       {
-        name: 'React',
-        level: 7,
+        name: 'Vue.js',
+        level: 8,
       },
       {
         name: 'Typescript',
-        level: 7,
+        level: 9,
       },
     ],
   },
@@ -154,12 +151,12 @@ export const skills: SkillGroup[] = [
         level: 9,
       },
       {
-        name: 'Node.js',
-        level: 7,
+        name: 'Ruby on Rails',
+        level: 9,
       },
       {
-        name: 'Rust',
-        level: 5,
+        name: 'Node.js',
+        level: 7,
       },
     ],
   },
@@ -172,11 +169,11 @@ export const skills: SkillGroup[] = [
       },
       {
         name: 'Kubernetes',
-        level: 7,
+        level: 9,
       },
       {
         name: 'Helm',
-        level: 7,
+        level: 8,
       },
       {
         name: 'Docker',
@@ -231,7 +228,7 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'August 2024 - August 2026 ',
+    date: 'August 2024 - August 2027 ',
     location: 'Georgia Institute of Technology',
     title: 'Masters of Science in Computer Science',
     content: <p>Concentration in Computing/Machine Learning.</p>,
@@ -253,16 +250,26 @@ export const education: TimelineItem[] = [
 
 export const experience: TimelineItem[] = [
   {
+    date: 'June 2026 - Present',
+    location: 'Shopify',
+    title: 'Software Engineer',
+    content: (
+      <ul className="list-disc pl-5">
+        <li className="mb-1">Increased payment accuracy and B2B merchant trust by leading the design and implementation of a new payment allocation logic that correctly attributes payments across partial fulfillments, returns, and cancellations, supporting <strong>109% year-over-year growth</strong> in B2B gross merchandise value. <strong>(Ruby on Rails)</strong></li>
+        <li className="mb-1">Accelerated end-to-end delivery of complex checkout capabilities by building core components, refactoring brittle business logic into maintainable systems, and driving release readiness through comprehensive test cases, local setup workflows, and a pre-release bughunt, enabling a smooth, on-time launch. <strong>(Ruby on Rails, GraphQL)</strong></li>
+        <li className="mb-1">Improved checkout reliability and conversion (<strong>+15%</strong>) by designing and shipping validation logic in Shopify Functions that prevented invalid merchant configurations from reaching production, reducing checkout errors and customer drop-off. <strong>(Ruby on Rails, GraphQL)</strong></li>
+        <li className="mb-1">Increased engineering productivity (<strong>~25%</strong>) by building and rolling out an internal VS Code extension that streamlined navigation in a large monorepo, now used organization-wide. <strong>(Typescript)</strong></li>
+      </ul>
+    ),
+  },
+  {
     date: 'July 2024 - Present',
     location: 'PearAI',
     title: 'Software Engineer',
     content: (
         <ul className="list-disc pl-5">
-          <li className="mb-1">Development of an AI-powered code editor based on VSCode, including the integration of AI search using Perplexity API <strong>(Typescript, VSCode API)</strong>.</li>
-        	<li className="mb-1">Implemented backend server logic using <strong>FastAPI</strong>, including user credit management and subscription tracking.</li>
-          <li className="mb-1">Integrated <strong>mem0</strong> as memory layer with asynchronous memory extraction and injection, for intelligent context retention in LLM interactions, offering users a personalized experience (<strong>FastAPI</strong>).</li>
-          <li className="mb-1">Designed and implemented responsive onboarding UI using <strong>React</strong> and <strong>Tailwind</strong> and injected into VSCode webview, enhancing user onboarding experience.</li>
-          <li className="mb-1">Optimized app performance through custom <strong>Redux</strong> state management, allowing independent history tracking between different integrations.</li>
+          <li className="mb-1">Delivered multiple AI-driven features, including search and memory layers, and designed a responsive onboarding UI integrated into the VSCode Webview, improving the user onboarding experience and boosting customer retention to over <strong>500 monthly and annual recurring paid subscribers</strong>. <strong>(Python/FastAPI, ReactJS, NextJS, Supabase/PostgreSQL)</strong></li>
+          <li className="mb-1">Built backend server logic using <strong>FastAPI</strong>, implementing user credit management, subscription tracking, and a top-up feature, resulting in a <strong>10% increase in monthly recurring revenue</strong>. <strong>(Python/FastAPI)</strong></li>
         </ul>
     ),
   },
@@ -272,9 +279,8 @@ export const experience: TimelineItem[] = [
     title: 'Software Engineer',
     content: (
         <ul className="list-disc pl-5">
-          <li className="mb-1">Led and developed the full-stack integration of 5 features, achieving significant process improvements, including an 80% reduction in lead time for cloud deployments, saving an average of 450 man-hours. <strong>(Vue2 Typescript, Python Django REST Framework)</strong></li>
-        	<li className="mb-1">Implemented numerous UI features and components in a scaled trunk-based development environment, including user-friendly admin pages with dynamic filtering and table functionalities, which accelerated daily administrative tasks such as data management by 90%. <strong>(Vue2, Typescript)</strong></li>
-          <li className="mb-1">Built, and maintained robust CI/CD pipelines for new and existing applications, resulting in an 80% improvement in the deployment speed of new updates and 0% error rate with no rollback incidents since launching the new application into production. <strong>(OpenShift, Kubernetes, Docker, Gitlab-CI, Artifactory, Helm, Vault)</strong></li>
+          <li className="mb-1">Led and developed full-stack features, achieving <strong>80% reduction in lead time</strong> for automated cloud deployments, saving an average of <strong>450 man-hours</strong>. <strong>(Vue2 Typescript, Python Django REST Framework)</strong></li>
+          <li className="mb-1">Built, and maintained robust CI/CD pipelines for new and existing applications, resulting in an <strong>80% improvement in the deployment speed</strong> of new updates and <strong>0% error rate</strong> with no rollback incidents since launching the new application into production. <strong>(OpenShift, Kubernetes, Docker, Gitlab-CI, Artifactory, Helm, Vault)</strong></li>
           <li className="mb-1">Developed comprehensive Grafana dashboards to visualize backend data as well as application health monitoring enabling real-time analytics and insights. <strong>(Grafana, Prometheus)</strong></li>  
         </ul>
     ),
