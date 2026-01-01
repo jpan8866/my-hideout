@@ -250,7 +250,7 @@ export const education: TimelineItem[] = [
 
 export const experience: TimelineItem[] = [
   {
-    date: 'June 2026 - Present',
+    date: 'January 2025 - Present',
     location: 'Shopify',
     title: 'Software Engineer',
     content: (
@@ -263,7 +263,7 @@ export const experience: TimelineItem[] = [
     ),
   },
   {
-    date: 'July 2024 - Present',
+    date: 'July 2024 - December 2024',
     location: 'PearAI',
     title: 'Software Engineer',
     content: (
